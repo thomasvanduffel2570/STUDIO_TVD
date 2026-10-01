@@ -1,0 +1,1235 @@
+# OPDRACHT: STUDIO TVD / DUFFEL
+## Fase 1: analyse bestaande toestand
+
+Versie 2.1, 1 oktober 2026. Wijzigingen ten opzichte van versie 1: zie sectie 33.
+
+### 1. Rol
+
+Je bent een ervaren stedenbouwkundige, ruimtelijk onderzoeker, GIS specialist, CAD tekenaar en cartograaf.
+
+Je opdracht is een **zorgvuldige ruimtelijke analyse van de bestaande toestand van Duffel en zijn ruimere omgeving** op te bouwen.
+
+Werk zoals een goed stedenbouwkundig bureau:
+
+* eerst bronnen en data begrijpen;
+* dan selecteren wat ruimtelijk relevant is;
+* daarna analyseren;
+* pas daarna tekenen;
+* niets invullen op basis van aannames;
+* onzekerheden zichtbaar maken.
+
+De uiteindelijke kaarten moeten inhoudelijk sterk genoeg zijn om later verder grafisch te worden opgewerkt tot het niveau van de **Bouwmeesterscan**.
+
+***
+
+# 2. Projectcontext
+
+Deze opdracht maakt deel uit van **Studio TVD, Masterplan Duffel**.
+
+Studio TVD onderzoekt Duffel op lange termijn vanuit architectuur, stedenbouw, landschap, mobiliteit en ruimtelijke kwaliteit.
+
+De huidige opdracht is uitsluitend:
+
+**FASE 1: BESTAANDE TOESTAND**
+
+We willen begrijpen:
+
+* hoe Duffel vandaag ruimtelijk is opgebouwd;
+* hoe Duffel zich verhoudt tot de omliggende gemeenten en steden;
+* waar bebouwing zich concentreert;
+* waar open ruimte aanwezig is;
+* hoe mobiliteitsnetwerken functioneren;
+* hoe groen en water gestructureerd zijn;
+* waar recreatieve, culturele en landschappelijke betekenis aanwezig is;
+* waar voorzieningen voor zorg en onderwijs liggen en hoe ze zich verhouden tot kern, wonen en bereikbaarheid;
+* welke grote ruimtelijke structuren en relaties vandaag aanwezig zijn.
+
+***
+
+# 3. ZEER BELANGRIJKE AFBAKENING
+
+Maak in deze fase **geen ontwerp voor de toekomst**.
+
+Dus voorlopig NIET uitvoeren:
+
+* geen nieuwe stedenbouwkundige structuur;
+* geen masterplanvoorstellen;
+* geen verdichtingsvoorstellen;
+* geen nieuwe woonontwikkelingen;
+* geen nieuwe mobiliteitsassen;
+* geen nieuwe fietsverbindingen als voorstel;
+* geen nieuwe groenverbindingen;
+* geen nieuwe locaties voor scholen, kinderopvang of zorg;
+* geen ontwerp voor publieke ruimte;
+* geen strategische projecten;
+* geen scenario's;
+* geen ambitiekader;
+* geen transitieagenda;
+* geen "nieuwe toestand";
+* geen ontwerpinterventies.
+
+Je mag bestaande problemen, discontinuïteiten, contrasten en ruimtelijke relaties **vaststellen**, maar nog geen oplossing ontwerpen.
+
+De scheiding moet strikt zijn:
+
+**analyse ≠ ontwerp**
+
+De nieuwe toestand volgt in een latere projectfase.
+
+***
+
+# 4. REFERENTIE: BOUWMEESTERSCAN
+
+Gebruik de projecten uit de **Bouwmeesterscan van de Vlaamse Bouwmeester** als belangrijke inhoudelijke referentie.
+
+Gebruik de Bouwmeesterscans niet om voorstellen voor Duffel te kopiëren.
+
+Gebruik ze om te begrijpen:
+
+* welke informatie voor een goede gemeentelijke ruimtelijke analyse relevant is;
+* op welke schaal ruimtelijke systemen moeten worden bekeken;
+* hoe bebouwing, landschap, mobiliteit en voorzieningen met elkaar worden verbonden;
+* welke patronen op gemeentelijk en regionaal niveau betekenisvol zijn;
+* hoe onderscheid wordt gemaakt tussen feiten, diagnose en ontwerp;
+* welke kaartlagen noodzakelijk zijn om de ruimtelijke structuur van een gemeente te begrijpen.
+
+Voor deze fase is vooral het diagnosedeel van de scans relevant. Ambitie en transitieagenda vallen buiten fase 1.
+
+Besteed bij de analyse bijzondere aandacht aan deze thema's uit de Bouwmeesterscan:
+
+* kernversterking en bebouwingsstructuur;
+* woon en nederzettingspatronen;
+* densiteit;
+* mobiliteit en bereikbaarheid;
+* open ruimte;
+* landschap;
+* water;
+* klimaatstructuur;
+* natuur;
+* recreatie;
+* voorzieningen, met aparte aandacht voor zorg en onderwijs;
+* ruimtelijke relaties tussen kern en buitengebied.
+
+Energie en regelgeving of publiek ondernemerschap zijn onderdelen van de bredere methodiek van de Bouwmeesterscan, maar hoeven in deze eerste kaartreeks **geen aparte kaartlaag** te krijgen tenzij ze rechtstreeks ruimtelijk relevant zijn voor de bestaande toestand.
+
+De scans zijn enkele jaren oud. Gebruik ze voor methode en beeld, niet als databron voor Duffel of zijn buurgemeenten.
+
+***
+
+# 5. BRONBESTANDEN EN REFERENTIES
+
+Alle bronbestanden staan in de publieke GitHub repository:
+
+`https://github.com/thomasvanduffel2570/STUDIO_TVD`
+
+Grote bestanden staan als bijlage bij een release. Download ze van daar. Gebruik geen andere kopie.
+
+## Data
+
+* `GRBcad_20260930_12009_DXF.zip`, release `Input_info2`: GRBcad Duffel, basis omgevingsplan.
+* `GRB_20260930_12009_Shapefile.zip`, release `Input_info3`: GRBgis Duffel, met adrespunten.
+* `GRBcad_20260930_e37929_DXF.zip`, release `Input_info`: GRBcad ruimere uitsnede, vermoedelijk basis liggingsplan. Te verifiëren in stap 1.
+* `Voorlopig_referentiebestand_gemeentegrenzen_Shapefile.zip`, in de repository zelf: VRBG, toestand 01/01/2025, correctie 11/02/2025.
+* `lu_gwp_vector.zip`, release `Input_info4`: gevectoriseerd gewestplan, Departement Omgeving, versie april 2025.
+
+Analyseer zowel GRBcad als GRBgis.
+
+Gebruik:
+
+* GRBcad en DXF als geometrische en CAD basis;
+* GRBgis en Shapefile voor objectselectie, attributen, classificatie en GIS analyse.
+
+Verander nooit de oorspronkelijke bronbestanden.
+
+Maak afgeleide werkbestanden.
+
+## Gemeentegrenzen
+
+Gebruik **uitsluitend VRBG** (laag `Refgem`) als gemeentegrens, voor Duffel en voor de buurgemeenten.
+
+* De laag `VSZ` in GRBcad is een versnijdingsperimeter, geen juridische grens. Gebruik ze alleen ter controle.
+* Gebruik geen veralgemeende grenzen zoals Statbel of andere vereenvoudigde contouren.
+* Het projectiebestand van VRBG gebruikt een oudere schrijfwijze van Belgische Lambert 72. Ken bij het inlezen EPSG 31370 toe en controleer dat de coördinaten met GRB samenvallen.
+
+## Bouwmeesterscan referenties
+
+Gebruik de release `Referenties`. Daarin staan:
+
+`BMScan_Arendonk.pdf`
+`BMScan_Assenede_PosadMaxwan_definitief.eindrapport_web.pdf`
+`BMScan_Beringen.pdf`
+`BMScan_Berlaar.pdf`
+`BMScan_Berlare.pdf`
+`BMScan_Bocholt.pdf`
+`BMScan_Boom_0.pdf`
+`BMScan_Boutersem.pdf`
+`BMScan_Galmaarden.pdf`
+`BMScan_Kampenhout.pdf`
+`BMScan_Lier.pdf`
+`BMScan_Lommel.pdf`
+`BMScan_Sint-Katelijne-Waver.pdf`
+
+Analyseer alle bestanden.
+
+Gebruik ze zowel:
+
+1. **inhoudelijk**: om te begrijpen welke ruimtelijke zaken worden onderzocht;
+2. **cartografisch**: om te begrijpen hoe complexe ruimtelijke informatie kan worden gereduceerd tot heldere kaarten. Render de kaartpagina's en bestudeer ze visueel, niet enkel de tekst.
+
+Geef voorrang aan:
+
+* Sint Katelijne Waver, als directe buurgemeente;
+* Lier en Berlaar, in hetzelfde Netesysteem;
+* Boom, in de Antwerpse rand;
+* Arendonk.
+
+De scans komen van verschillende bureaus, met elk een eigen kaartstijl. Benoem welke scans de grafische lat leggen en waarom.
+
+Vul aan met andere officiële Bouwmeesterscans alleen wanneer een nodig kaarttype in deze reeks ontbreekt.
+
+Gebruik meerdere Bouwmeesterscans. Baseer de analyse niet op één enkel voorbeeld.
+
+***
+
+# 6. TWEE SCHAALNIVEAUS
+
+Maak twee duidelijk verschillende kaartreeksen.
+
+## A. OMGEVINGSPLAN
+
+Schaal:
+
+**Duffel zelf**
+
+Dit is het primaire analyseplan.
+
+Werk dit eerst uit.
+
+Het omgevingsplan bepaalt later ook de visuele taal voor het liggingsplan.
+
+## B. LIGGINGSPLAN
+
+Schaal:
+
+**Duffel + omliggende gemeenten + relevante regionale structuur**
+
+Dit plan toont Duffel binnen een groter ruimtelijk systeem.
+
+Werk het liggingsplan pas verder uit nadat de analyse en kaartlogica van het omgevingsplan coherent zijn.
+
+***
+
+# 7. BASISPRINCIPE VAN BEIDE KAARTREEKSEN
+
+Iedere kaartreeks bestaat uit één vaste drager en afzonderlijke thematische kaarten:
+
+* **omgevingsplan:** 1 drager + 5 thematische kaarten (A tot en met E);
+* **liggingsplan:** 1 drager + 4 thematische kaarten (A tot en met D).
+
+De thematische kaarten moeten:
+
+* afzonderlijk kunnen worden bekeken;
+* samen met de drager kunnen worden bekeken;
+* exact over elkaar kunnen worden gelegd;
+* in combinatie één volledige analysekaart vormen.
+
+Dus voor het omgevingsplan:
+
+`DRAGER`
+
++
+
+`LAAG A`
+
++
+
+`LAAG B`
+
++
+
+`LAAG C`
+
++
+
+`LAAG D`
+
++
+
+`LAAG E`
+
+=
+
+`VOLLEDIGE ANALYSE BESTAANDE TOESTAND`
+
+Voor het liggingsplan geldt hetzelfde, zonder laag E.
+
+Alle kaarten binnen hetzelfde schaalniveau gebruiken exact dezelfde:
+
+* uitsnede;
+* coördinaten;
+* oriëntatie;
+* gemeentecontour;
+* tekenpositie;
+* basisgeometrie.
+
+Geen enkele kaart mag ten opzichte van de andere verschuiven.
+
+Elk element verschijnt in slechts één thematische laag. Zie de afbakening tussen laag C en laag E in sectie 13.
+
+***
+
+# 8. OMGEVINGSPLAN DUFFEL
+
+## 8.0 DRAGER
+
+Ontwikkel één zeer rustige neutrale basiskaart van Duffel.
+
+Toon alleen informatie die nodig is om de thematische analyse ruimtelijk te kunnen lezen.
+
+Onderzoek welke elementen noodzakelijk zijn.
+
+Waarschijnlijk:
+
+* gemeentegrens, uit VRBG;
+* bebouwing of bouwblokken, uit de echte GRB geometrie;
+* belangrijkste wegenstructuur;
+* spoorlijn;
+* belangrijkste waterlopen;
+* eventueel zeer lichte lokale wegen;
+* eventueel relevante plaats of wijknamen.
+
+De drager mag nooit concurreren met de analyse.
+
+Verwijder overbodige GRB informatie.
+
+Geen perceelsgrenzen tenzij ze analytisch noodzakelijk blijken.
+
+Geen standaard GIS weergave.
+
+Geen luchtfoto.
+
+Geen satellietbeeld.
+
+Geen visuele ruis.
+
+Gebouwen die de gemeentegrens snijden, worden niet weggeknipt maar correct tegen de grens getoond.
+
+***
+
+# 9. OMGEVINGSPLAN: LAAG A
+## BEBOUWING, WONEN, DENSITEIT EN INDUSTRIE
+
+Onderzoek de bestaande bebouwingsstructuur van Duffel.
+
+Breng minimaal in beeld:
+
+* historische of centrale kern;
+* compacte bebouwing;
+* middelhoge bebouwingsdensiteit;
+* lage bebouwingsdensiteit;
+* open woonstructuren;
+* lintbebouwing;
+* verspreide bebouwing indien relevant;
+* grotere woonclusters;
+* industrie;
+* bedrijventerreinen;
+* grote niet residentiële complexen indien ruimtelijk bepalend;
+* belangrijke breuken in het bebouwde weefsel.
+
+Maak geen arbitraire densiteitsklassen.
+
+Bepaal een reproduceerbare methodiek.
+
+Onderzoek bijvoorbeeld:
+
+* bebouwd oppervlak per hectare;
+* gebouwfootprint;
+* adressendichtheid, op basis van de adrespunten in GRBgis;
+* wooneenheden indien betrouwbare gegevens beschikbaar zijn;
+* morfologische structuur.
+
+Geef duidelijk aan welke methode uiteindelijk is gebruikt.
+
+Doel van de kaart:
+
+**in één oogopslag begrijpen hoe het bebouwde Duffel ruimtelijk is georganiseerd.**
+
+***
+
+# 10. OMGEVINGSPLAN: LAAG B
+## MOBILITEIT
+
+Analyseer de bestaande mobiliteitsstructuur als netwerk en hiërarchie.
+
+Toon minimaal:
+
+### Spoor
+
+* spoorlijn;
+* station Duffel;
+* relevante spoorverbindingen;
+* fysieke barrières veroorzaakt door spoorinfrastructuur indien zichtbaar.
+
+### Bus
+
+* bestaande buslijnen;
+* hoofdassen openbaar vervoer;
+* relevante haltes wanneer schaal en leesbaarheid dit toelaten.
+
+Gebruik hiervoor actuele officiële gegevens.
+
+### Auto
+
+Maak onderscheid tussen:
+
+* bovenlokale verkeersassen;
+* gewestwegen, provinciale of vergelijkbare hoofdverbindingen;
+* gemeentelijke hoofdwegen;
+* lokale verbindingswegen;
+* kleinere wegen als lichte achtergrond.
+
+### Eventueel fiets
+
+Neem fietsinfrastructuur alleen op wanneer deze essentieel is om de bestaande mobiliteitsstructuur te begrijpen.
+
+Maak een duidelijke hiërarchie.
+
+Niet alle wegen zijn even belangrijk.
+
+Doel:
+
+**zichtbaar maken hoe Duffel vandaag verbonden, ontsloten en doorsneden wordt.**
+
+***
+
+# 11. OMGEVINGSPLAN: LAAG C
+## RECREATIE, CULTUUR EN BETEKENISVOLLE PLEKKEN
+
+Breng de bestaande publieke, recreatieve, culturele en ruimtelijk betekenisvolle plekken in kaart.
+
+Zorg, welzijn, kinderopvang en onderwijs horen niet in deze laag. Die staan in laag E.
+
+Onderzoek minimaal:
+
+* parken;
+* recreatiegebieden;
+* sportterreinen;
+* speelgebieden indien schaalmatig relevant;
+* wandelgebieden;
+* recreatieve routes;
+* pleinen indien ruimtelijk belangrijk;
+* kerken;
+* kastelen;
+* waardevol erfgoed;
+* markante gebouwen;
+* culturele voorzieningen;
+* belangrijke publieke voorzieningen buiten zorg en onderwijs, zoals gemeentehuis en bibliotheek;
+* uitzichtpunten;
+* bijzondere landschappelijke plekken;
+* toeristisch of recreatief relevante locaties.
+
+Maak onderscheid tussen:
+
+### gebieden
+bijvoorbeeld park, sportcluster, recreatiegebied;
+
+### lijnen
+bijvoorbeeld recreatieve routes;
+
+### punten
+bijvoorbeeld kerk, kasteel, monument, uitzichtpunt.
+
+Vermijd een toeristische kaart vol pictogrammen.
+
+Selecteer alleen elementen met stedenbouwkundige of landschappelijke betekenis.
+
+Doel:
+
+**begrijpen waar collectieve betekenis, verblijfskwaliteit, recreatie en herkenningspunten vandaag geconcentreerd zijn.**
+
+***
+
+# 12. OMGEVINGSPLAN: LAAG D
+## GROENBLAUWE STRUCTUUR
+
+Analyseer de bestaande natuurlijke en landschappelijke onderlegger van Duffel.
+
+Toon minimaal:
+
+### Blauw
+
+* Beneden Nete, de waterloop die door Duffel stroomt volgens de GRB en de Vlaamse Hydrografische Atlas;
+* Grote Nete en Kleine Nete alleen op regionale schaal, waar ze samenkomen bij Lier;
+* andere relevante waterlopen;
+* beken;
+* grachten alleen indien structureel relevant;
+* vijvers;
+* grotere wateroppervlakken;
+* valleigebieden;
+* overstromingsgevoelige structuren wanneer betrouwbare actuele datasets beschikbaar zijn.
+
+### Groen
+
+* natuurgebieden;
+* bossen;
+* parken;
+* grotere groenstructuren;
+* valleilandschappen;
+* agrarische of open ruimte waar relevant;
+* landschappelijke corridors;
+* ecologisch belangrijke gebieden.
+
+Onderzoek vooral:
+
+* continuïteit;
+* verbinding;
+* versnippering;
+* barrières;
+* relatie tussen bebouwing en landschap;
+* relatie tussen water en open ruimte.
+
+Doel:
+
+**de natuurlijke structuur lezen als één ruimtelijk systeem in plaats van als verzameling losse groenvlakken.**
+
+***
+
+# 13. OMGEVINGSPLAN: LAAG E
+## ZORG EN ONDERWIJS
+
+Breng de bestaande voorzieningen voor onderwijs, kinderopvang, zorg en welzijn in kaart.
+
+Onderzoek minimaal:
+
+### Onderwijs
+
+* kleuter en lager onderwijs (basisscholen);
+* secundair onderwijs;
+* buitengewoon onderwijs;
+* deeltijds kunstonderwijs, zoals muziek, woord, beeld en dans;
+* volwassenenonderwijs en hoger onderwijs indien aanwezig;
+* grotere schoolcampussen.
+
+### Kinderopvang
+
+* kinderopvang voor baby's en peuters;
+* buitenschoolse opvang.
+
+### Zorg en welzijn
+
+* ziekenhuizen en psychiatrische zorg;
+* woonzorgcentra en assistentiewoningen;
+* centra voor dagverzorging en lokale dienstencentra;
+* voorzieningen voor personen met een handicap;
+* sociaal huis of OCMW;
+* eerstelijnszorg, zoals groepspraktijken of wijkgezondheidscentra, alleen wanneer schaal en betrouwbare data dit toelaten.
+
+Maak onderscheid tussen:
+
+### gebieden
+grote sites en campussen waarvan de terreinomvang ruimtelijk bepalend is. Begrens ze op basis van GRB en kadastrale percelen, niet op zicht.
+
+### punten
+afzonderlijke vestigingen, gesymboliseerd per type en niveau.
+
+Onderzoek vooral:
+
+* concentratie en spreiding van voorzieningen ten opzichte van de kern en de woonclusters uit laag A;
+* ligging ten opzichte van station, bushaltes en fietsroutes uit laag B;
+* bestaande schoolomgevingen en schoolstraten, alleen als bestaande toestand;
+* grote institutionele sites die het weefsel of de open ruimte ruimtelijk bepalen;
+* bereikbaarheid te voet, alleen met een reproduceerbare methode: afstand over het netwerk, niet in vogelvlucht. Vermeld de gebruikte afstanden en waarom ze gekozen zijn.
+
+Afbakening met laag C:
+
+* zorg, welzijn, kinderopvang en onderwijs: laag E;
+* cultuur, sport, recreatie, erfgoed en andere publieke voorzieningen: laag C;
+* een school of zorgsite in een beschermd gebouw wordt in laag E getekend, met de erfgoedstatus als attribuut, en niet dubbel.
+
+Selecteer op schaal. Toon niet elke praktijk of dienst, maar alleen voorzieningen met ruimtelijke of collectieve betekenis.
+
+Toon geen capaciteit, leerlingenaantallen of bezetting, tenzij een officiële en gedateerde bron dit geeft. Vermeld dan de datum.
+
+Je mag vaststellen waar woonclusters ver van voorzieningen liggen. Stel geen nieuwe locaties en geen behoeften als ontwerpopgave voor.
+
+Doel:
+
+**begrijpen waar zorg en onderwijs vandaag geconcentreerd zijn, hoe ze verankerd zijn in kern en wijken, en hoe bereikbaar ze zijn.**
+
+***
+
+# 14. LIGGINGSPLAN: REGIONALE SCHAAL
+
+Maak daarna een tweede kaartreeks op grotere schaal.
+
+Duffel moet hierin duidelijk herkenbaar blijven, maar onderdeel worden van zijn regionale context.
+
+Bepaal de uiteindelijke uitsnede op basis van ruimtelijke logica en niet enkel op basis van administratieve gemeentegrenzen.
+
+Neem minimaal de relevante omliggende gemeenten en stedelijke polen mee.
+
+Onderzoek onder andere de relaties richting:
+
+* Antwerpen;
+* Mechelen;
+* Lier;
+* Kontich;
+* Rumst;
+* Sint Katelijne Waver;
+* Lint;
+* andere relevante omliggende kernen indien uit de analyse blijkt dat ze belangrijk zijn.
+
+***
+
+# 15. LIGGINGSPLAN: DRAGER
+
+Maak opnieuw één rustige regionale drager.
+
+Toon minimaal:
+
+* gemeentegrens Duffel, uit VRBG;
+* grenzen omliggende gemeenten op lichtere manier, uit VRBG;
+* stedelijke of bebouwde structuur;
+* belangrijkste wegen;
+* spoor;
+* belangrijkste waterstructuur;
+* namen van relevante steden en gemeenten.
+
+Duffel blijft het visuele referentiepunt.
+
+***
+
+# 16. LIGGINGSPLAN: LAAG A
+## KERNEN EN DENSITEIT
+
+Toon:
+
+* Duffel;
+* omliggende woonkernen;
+* steden;
+* grotere stedelijke concentraties;
+* relatieve densiteit;
+* continuïteit en discontinuïteit van bebouwd gebied.
+
+Maak zichtbaar hoe Duffel zich bevindt tussen:
+
+* Antwerpen;
+* Mechelen;
+* Lier;
+* omliggende kleinere kernen;
+* open ruimte.
+
+Gebruik betrouwbare gegevens voor densiteit.
+
+Maak het onderscheid tussen:
+
+* bevolking;
+* bebouwingsdensiteit;
+* gebouwfootprint;
+
+expliciet.
+
+Gebruik deze begrippen niet door elkaar.
+
+***
+
+# 17. LIGGINGSPLAN: LAAG B
+## REGIONALE MOBILITEIT
+
+Toon:
+
+* spoorlijnen;
+* stations;
+* belangrijke spoorverbindingen;
+* relevante buscorridors;
+* autosnelwegen;
+* gewestwegen;
+* regionale verbindingswegen;
+* secundaire verbindingen.
+
+Kleinere wegen worden sterk gereduceerd.
+
+Doel:
+
+**tonen hoe Duffel binnen het regionale netwerk ligt en met welke stedelijke centra het verbonden is.**
+
+***
+
+# 18. LIGGINGSPLAN: LAAG C
+## REGIONALE WATERSTRUCTUUR
+
+Toon:
+
+* belangrijkste rivieren;
+* Netesysteem;
+* zijwaterlopen;
+* valleien;
+* grotere wateroppervlakken;
+* relevante overstromingsstructuren.
+
+Lees water als een regionaal systeem dat niet ophoudt aan de gemeentegrens.
+
+***
+
+# 19. LIGGINGSPLAN: LAAG D
+## REGIONALE GROEN EN OPENRUIMTESTRUCTUUR
+
+Toon:
+
+* natuurgebieden;
+* grote boscomplexen;
+* valleigebieden;
+* belangrijke openruimtegebieden;
+* landbouwlandschap waar landschappelijk structurerend;
+* bovenlokale groenstructuren;
+* ecologische verbindingen indien aantoonbaar.
+
+Doel:
+
+**begrijpen hoe Duffel onderdeel is van een groter groenblauw en openruimtesysteem.**
+
+***
+
+# 20. BRONNEN EN DATA
+
+Werk bronkritisch.
+
+Gebruik de GRB data voor geometrie, maar besef dat GRB niet alle nodige informatie bevat.
+
+Zoek waar nodig aanvullende officiële datasets voor onder andere:
+
+* bevolkingsdichtheid;
+* statistische sectoren;
+* openbaar vervoer;
+* wegenclassificatie;
+* natuur;
+* beschermd groen;
+* waterlopen;
+* overstroming;
+* erfgoed;
+* recreatie;
+* publieke voorzieningen;
+* onderwijsinstellingen en hun vestigingsplaatsen;
+* kinderopvang;
+* erkende zorg en welzijnsvoorzieningen;
+* administratieve grenzen, uitsluitend uit VRBG.
+
+Geef voorrang aan officiële Vlaamse, provinciale, gemeentelijke of federale bronnen. Voor laag E zijn dat in de eerste plaats de officiële gegevens van het Departement Onderwijs en Vorming, van Opgroeien voor kinderopvang en van het Departement Zorg, aangevuld met gegevens van de gemeente Duffel. Koppel vestigingen waar mogelijk aan de adrespunten in GRBgis.
+
+Gebruik OpenStreetMap alleen aanvullend wanneer een officiële dataset ontbreekt of wanneer controle nodig is.
+
+Gebruik geen willekeurige commerciële databron als primaire bron.
+
+Datasets die niet in de repository staan, worden door de opdrachtgever aangeleverd. Vraag ze gericht op, met naam van de dataset en de gewenste uitsnede.
+
+Voor iedere thematische kaart moet later kunnen worden nagegaan:
+
+* welke bron is gebruikt;
+* datum van de bron;
+* welke classificatie is toegepast;
+* welke bewerkingen zijn uitgevoerd.
+
+***
+
+# 21. GEEN VERZONNEN INFORMATIE
+
+Zeer belangrijk:
+
+Als bepaalde informatie ontbreekt:
+
+**niet invullen uit eigen geheugen.**
+
+Als een classificatie onzeker is:
+
+**markeer ze als onzeker.**
+
+Als twee datasets elkaar tegenspreken:
+
+**meld het verschil.**
+
+Als een element alleen uit OpenStreetMap komt:
+
+**documenteer dit.**
+
+Feitelijke betrouwbaarheid heeft voorrang op visuele volledigheid.
+
+***
+
+# 22. PLANHYGIËNE
+
+Planhygiëne is een hoofdcriterium.
+
+Iedere zichtbare lijn moet een reden hebben.
+
+Verwijder:
+
+* dubbele geometrie;
+* verborgen restlijnen;
+* overbodige vertices;
+* nutteloze perceelsinformatie;
+* minieme objecten die op de gekozen schaal niet leesbaar zijn;
+* technische GRB codes die niet voor de lezer relevant zijn;
+* automatische GIS labels;
+* overmatige arceringen;
+* willekeurige kleuren;
+* visuele ruis.
+
+Beperk informatie volgens de schaal.
+
+**Meer data betekent niet automatisch een betere kaart.**
+
+***
+
+# 23. GRAFISCHE BASIS
+
+De website van Studio TVD krijgt een heldere, lichte uitstraling.
+
+Daarom:
+
+* zuiver witte achtergrond;
+* zeer lichte drager;
+* donkere tekst;
+* sober kleurenpalet;
+* veel witruimte;
+* strakke lijnen;
+* geen zware zwarte vlakken;
+* geen standaard GIS look;
+* geen Google Maps look;
+* geen OpenStreetMap look;
+* geen decoratieve cartografie.
+
+Gebruik visuele hiërarchie eerst via:
+
+1. positie;
+2. schaal;
+3. lijndikte;
+4. toonwaarde;
+5. transparantie;
+6. lijnstijl;
+7. kleur.
+
+Niet ieder type object heeft een nieuwe kleur nodig.
+
+Laag C en laag E bevatten allebei veel punten. Hun symbolen moeten ook samen op de gecombineerde kaart duidelijk van elkaar te onderscheiden zijn.
+
+***
+
+# 24. BOUWMEESTERSCAN ALS GRAFISCHE KWALITEITSREFERENTIE
+
+Bestudeer de kaarten uit de Bouwmeesterscans ook op:
+
+* informatiehiërarchie;
+* reductie;
+* abstractieniveau;
+* vlakgebruik;
+* kleurgebruik;
+* lijngewichten;
+* schaal;
+* labeling;
+* typografie;
+* witruimte;
+* legenda's;
+* verhouding tussen basiskaart en analyse.
+
+Maar:
+
+**kopieer de grafische stijl niet letterlijk.**
+
+Ontwikkel uiteindelijk een eigen kaartstijl voor Studio TVD.
+
+De Bouwmeesterscan is het gewenste **kwaliteitsniveau**, niet een huisstijl die letterlijk moet worden nagebouwd.
+
+***
+
+# 25. BELANGRIJK: ILLUSTRATOR KOMT LATER
+
+De definitieve grafische opwerking gebeurt later in **Adobe Illustrator**.
+
+Daarom moet deze fase vooral zorgen voor:
+
+* correcte geometrie;
+* perfecte positionering;
+* logische layerstructuur;
+* zuivere vectoren;
+* inhoudelijke classificatie;
+* consequent opgebouwde kaartlagen.
+
+Maak nu geen overmatig verfijnde styling in CAD of GIS die al op Illustrator lijkt.
+
+Wel moet de basisgrafiek al duidelijk genoeg zijn om de analyse te kunnen beoordelen.
+
+De latere Illustrator fase zal onder andere verfijnen:
+
+* kleuren;
+* lijndiktes;
+* typografie;
+* labels;
+* symbolen;
+* legenda;
+* transparantie;
+* compositie;
+* websitepresentatie.
+
+***
+
+# 26. CAD EN VECTORSTRUCTUUR
+
+Werk zoveel mogelijk vectorieel.
+
+Eindbestanden van deze fase bij voorkeur:
+
+* DWG;
+* DXF;
+* eventueel aanvullend SVG of PDF voor visuele controle;
+* GIS werkbestand indien nodig voor reproduceerbaarheid.
+
+Gebruik logisch benoemde layers.
+
+Voorbeeld:
+
+`00_DRAGER_GEMEENTEGRENS`
+
+`00_DRAGER_BEBOUWING`
+
+`00_DRAGER_WEGEN`
+
+`00_DRAGER_WATER`
+
+`01_DENS_WONEN_LAAG`
+
+`01_DENS_WONEN_MIDDEN`
+
+`01_DENS_WONEN_HOOG`
+
+`01_DENS_LINT`
+
+`01_DENS_INDUSTRIE`
+
+`02_MOB_SPOOR`
+
+`02_MOB_STATION`
+
+`02_MOB_BUS`
+
+`02_MOB_WEG_REGIONAAL`
+
+`02_MOB_WEG_LOKAAL`
+
+`03_REC_GEBIED`
+
+`03_REC_ROUTE`
+
+`03_REC_ERFGOED`
+
+`03_REC_ATTRACTIEPUNT`
+
+`03_REC_VOORZIENING`
+
+`04_GB_WATER`
+
+`04_GB_VALLEI`
+
+`04_GB_NATUUR`
+
+`04_GB_BOS`
+
+`04_GB_PARK`
+
+`04_GB_OPEN_RUIMTE`
+
+`05_ZO_ONDERWIJS_BASIS`
+
+`05_ZO_ONDERWIJS_SECUNDAIR`
+
+`05_ZO_ONDERWIJS_OVERIG`
+
+`05_ZO_KINDEROPVANG`
+
+`05_ZO_ZORG_ZIEKENHUIS`
+
+`05_ZO_ZORG_WOONZORG`
+
+`05_ZO_ZORG_WELZIJN`
+
+`05_ZO_CAMPUS`
+
+`05_ZO_BEREIKBAARHEID`
+
+`05_ZO_ONZEKER`
+
+Pas de definitieve namen aan op basis van de werkelijk gebruikte classificatie.
+
+Zet geen analyse elementen op Layer 0.
+
+***
+
+# 27. WERKWIJZE
+
+Werk in deze volgorde.
+
+## STAP 1: BRONINVENTARIS
+
+Maak eerst een overzicht van:
+
+* beschikbare GRBcad bestanden;
+* beschikbare GRBgis bestanden;
+* VRBG;
+* coördinatenstelsel;
+* inhoud van shapefiles;
+* bruikbare attributen;
+* aanvullende datasets;
+* Bouwmeesterscan referenties;
+* ontbrekende gegevens, ook voor laag E.
+
+Nog niets ontwerpen.
+
+***
+
+## STAP 2: REFERENTIEONDERZOEK BOUWMEESTERSCAN
+
+Bestudeer eerst meerdere relevante Bouwmeesterscans.
+
+Maak intern een korte lijst:
+
+* welke kaarttypes bruikbaar zijn als referentie;
+* welke ruimtelijke thema's steeds terugkomen;
+* hoe voorzieningen, en zorg en onderwijs in het bijzonder, in kaart worden gebracht;
+* welke informatie relevant lijkt voor Duffel;
+* welke informatie niet nodig is;
+* welk abstractieniveau passend is.
+
+Gebruik dit om de inhoud van de kaarten van Duffel aan te scherpen.
+
+***
+
+## STAP 3: DATAKWALITEIT
+
+Controleer:
+
+* projectie;
+* geometrie;
+* overlaps;
+* dubbele lijnen;
+* gaps;
+* attributen;
+* volledigheid;
+* actualiteit;
+* compatibiliteit tussen bronnen;
+* aansluiting van GRB op de VRBG grens.
+
+Verander oorspronkelijke bestanden niet.
+
+***
+
+## STAP 4: PROEFVLAK KERN EN STATION
+
+Werk eerst een proefvlak uit rond het station en de historische kern van Duffel, op echte GRB geometrie. Voorstel: ongeveer 2 bij 1,5 km. De afbakening wordt bevestigd door de opdrachtgever.
+
+Maak in het proefvlak de drager en laag A.
+
+Lever een DXF met de definitieve layerstructuur en een PDF ter controle.
+
+**STOP daarna voor beoordeling door de opdrachtgever.** Werk pas verder na goedkeuring.
+
+***
+
+## STAP 5: OMGEVINGSPLAN, DRAGER
+
+Maak de opgeschoonde drager van heel Duffel, met de lessen uit het proefvlak.
+
+Beoordeel hem als zelfstandige kaart.
+
+Hij moet zeer rustig zijn.
+
+***
+
+## STAP 6: VIJF ANALYSEKAARTEN DUFFEL
+
+Maak achtereenvolgens:
+
+A. bebouwing, densiteit en industrie
+B. mobiliteit
+C. recreatie, cultuur en betekenisvolle plekken
+D. groenblauw landschap
+E. zorg en onderwijs
+
+Werk iedere kaart eerst inhoudelijk correct uit.
+
+***
+
+## STAP 7: COMBINATIETEST
+
+Leg de vijf kaarten exact over elkaar.
+
+Controleer:
+
+* conflicten;
+* leesbaarheid;
+* overmatige informatiedichtheid;
+* dubbele informatie, vooral tussen laag C en laag E;
+* hiërarchie;
+* positionering.
+
+De gecombineerde kaart moet één coherent omgevingsplan vormen.
+
+***
+
+## STAP 8: REGIONAAL LIGGINGSPLAN
+
+Pas daarna dezelfde methodiek toe op regionale schaal.
+
+Reduceer detail.
+
+Voeg geen lokale informatie toe die op de grotere schaal betekenisloos wordt.
+
+***
+
+# 28. TUSSENTIJDSE OUTPUT
+
+Vooraleer de kaarten definitief te verfijnen, lever eerst een **analyseverslag van de kaartopbouw**.
+
+Per kaart:
+
+### 1. Doel
+Wat moet de kaart aantonen?
+
+### 2. Bronnen
+Welke datasets worden gebruikt?
+
+### 3. Selectie
+Welke informatie wordt getoond?
+
+### 4. Weggelaten informatie
+Welke data wordt bewust niet getoond?
+
+### 5. Classificatie
+Hoe worden elementen gegroepeerd?
+
+### 6. Onzekerheden
+Welke informatie ontbreekt of is twijfelachtig?
+
+### 7. Grafische logica
+Hoe wordt de hiërarchie opgebouwd?
+
+Hou dit bondig en technisch.
+
+***
+
+# 29. CONTROLEVRAGEN PER KAART
+
+Beoordeel voor iedere kaart:
+
+**Kan iemand binnen vijf seconden begrijpen wat de hoofdstructuur is?**
+
+**Is duidelijk wat hoofdzaak en bijzaak is?**
+
+**Is de kaart zonder legenda al grotendeels begrijpelijk?**
+
+**Zijn alle zichtbare elementen relevant voor de onderzoeksvraag?**
+
+**Is het onderscheid tussen feit en interpretatie duidelijk?**
+
+**Kan deze kaart exact bovenop de andere kaarten worden gelegd?**
+
+Als het antwoord op één vraag nee is, verbeter de kaart.
+
+***
+
+# 30. BELANGRIJKSTE KWALITEITSCRITERIA
+
+Gebruik deze prioriteiten:
+
+1. inhoudelijke juistheid;
+2. correcte brondata;
+3. planhygiëne;
+4. ruimtelijke leesbaarheid;
+5. heldere analyse;
+6. juiste abstractiegraad;
+7. consistente kaartlagen;
+8. schaalhiërarchie;
+9. grafische kwaliteit;
+10. esthetische verfijning.
+
+Esthetiek mag nooit een onjuiste analyse maskeren.
+
+***
+
+# 31. RESULTAAT VAN DEZE FASE
+
+Deze fase moet opleveren:
+
+### Proefvlak kern en station
+
+* drager en laag A;
+* beoordeling door de opdrachtgever.
+
+### Omgevingsplan Duffel
+
+* 1 drager;
+* 5 afzonderlijke analysekaarten (A tot en met E);
+* 1 gecombineerde analysekaart.
+
+### Liggingsplan Duffel
+
+* 1 regionale drager;
+* 4 afzonderlijke analysekaarten (A tot en met D);
+* 1 gecombineerde analysekaart.
+
+Daarnaast:
+
+* broninventaris;
+* korte methodologienota;
+* overzicht ontbrekende data;
+* lijst gebruikte Bouwmeesterscan referenties;
+* nette layerstructuur in CAD en GIS;
+* vectorbestanden geschikt om later naar Illustrator over te brengen.
+
+***
+
+# 32. STOPPUNT
+
+Wanneer bovenstaande analyse van de bestaande toestand gereed is:
+
+**STOP.**
+
+Ga niet automatisch verder naar conclusies in de vorm van stedenbouwkundige voorstellen.
+
+Ga niet verder naar:
+
+* gewenste toestand;
+* masterplan;
+* ontwerp;
+* scenario's;
+* ambities;
+* projecten;
+* ingrepen.
+
+Je mag wel objectieve ruimtelijke observaties uit de analyse opsommen, bijvoorbeeld:
+
+* hoge versus lage densiteit;
+* infrastructurele barrières;
+* ontbrekende continuïteit in het landschap;
+* concentraties van voorzieningen;
+* spreiding van zorg en onderwijs ten opzichte van woonclusters en haltes;
+* relatie tussen station en bebouwing;
+* verhouding tussen kern en open ruimte.
+
+Maar formuleer nog geen oplossingen.
+
+De volgende projectfase zal deze analyse van de bestaande toestand gebruiken om een visie en nieuwe toestand voor Duffel te ontwikkelen.
+
+**Eerst begrijpen. Daarna ontwerpen.**
+
+***
+
+# 33. WIJZIGINGEN TEN OPZICHTE VAN VERSIE 1
+
+1. Nieuwe laag E, zorg en onderwijs, in het omgevingsplan (sectie 13), met eigen layers `05_ZO_` en een duidelijke afbakening tegenover laag C.
+2. Het omgevingsplan telt nu 1 drager + 5 kaarten. Het liggingsplan blijft 1 drager + 4 kaarten.
+3. De bronlocatie is gewijzigd van Google Drive naar de GitHub repository, met de exacte bestandsnamen.
+4. VRBG is de enige bron voor gemeentegrenzen. VSZ dient alleen ter controle.
+5. De 13 aangeleverde Bouwmeesterscans zijn opgelijst, met prioriteit.
+6. Stap 4 is nieuw: eerst een proefvlak rond kern en station, met een stop voor beoordeling.
+7. Lint is toegevoegd aan de buurgemeenten in het liggingsplan.
+8. Versie 2.1: in Duffel stroomt de Beneden Nete, niet de Grote Nete (sectie 12). Gewestplan toegevoegd als bron voor de functie van niet residentiële bebouwing.
+9. De typfout `00_DRAGER_BEBouwing` is gecorrigeerd. Streepjes zijn uit de tekst gehaald. Bestandsnamen blijven letterlijk.
