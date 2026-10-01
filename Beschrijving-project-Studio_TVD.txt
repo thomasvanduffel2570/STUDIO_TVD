@@ -1,0 +1,67 @@
+**PROJECT: STUDIO TVD**
+
+**Doel**
+Studio TVD is een persoonlijke website waarin ik kennis, werk en inzichten bundel die ik wil doorgeven. De site toont wat ik maak, wat ik begrijp en hoe ik kijk naar ruimte, mens en omgeving. Geen klassieke portfolio, maar een heldere plek met inhoud en visie.
+
+**Kernidee**
+De website vertrekt vanuit één lijn: waarde creëren en delen.
+Drie pijlers ondersteunen dit:
+
+1. **Muziek**
+   Zelfgecomponeerde pianomuziek.
+   Focus op sfeer, eenvoud en beleving.
+   Per stuk: korte duiding, audio/video en eventueel bladmuziek.
+
+2. **Architectuur**
+   Brede benadering van architectuur en bouwen.
+   Inclusief mijn werk als ingenieur in membraanconstructies.
+   Projecten, inzichten en manier van denken over structuur, lichtheid en ruimte.
+
+3. **Duffel**
+   Een langetermijnvisie op Duffel als gemeente.
+   Observaties, kansen en ruimtelijke voorstellen.
+   Uitwerking naar een eigen masterplan.
+
+**Positionering**
+Studio TVD is geen cv-site en geen blog.
+Het is een persoonlijke studio waar denken en maken samenkomen.
+De nadruk ligt op helderheid, inhoud en relevantie voor anderen.
+
+**Structuur website**
+
+* Home
+* Muziek
+* Architectuur
+* Duffel
+* Visie
+* Contact
+
+**Toon en stijl**
+
+* helder en direct
+* korte zinnen
+* geen vakjargon zonder noodzaak
+* rustig en doordacht
+* inhoud boven vorm
+
+**Werkwijze inhoud**
+
+* werken in lagen, niet alles tegelijk
+* starten met kernpagina’s
+* daarna stelselmatig uitbreiden
+* vaste structuur per type content (project, tekst, muziekstuk)
+
+**Beheer**
+
+* eenvoudige en schaalbare setup
+* focus op publiceren, niet op techniek
+* regelmatige kleine updates
+* consistente structuur en beeldtaal
+
+**Doel op lange termijn**
+Een plek opbouwen die:
+
+* mijn werk en denken helder toont
+* bruikbaar is voor anderen
+* groeit in diepgang en kwaliteit
+* standhoudt in de tijd
